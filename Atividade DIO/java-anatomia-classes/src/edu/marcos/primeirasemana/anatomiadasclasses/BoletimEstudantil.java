@@ -18,7 +18,7 @@ public class BoletimEstudantil {
             System.out.println("PROVA MINERVA");
         }
     // Estrutura levemente diferente, mas com o mesmo siginificado
-        else{
+        else {
             System.out.println("APROVADO");
         }
 
