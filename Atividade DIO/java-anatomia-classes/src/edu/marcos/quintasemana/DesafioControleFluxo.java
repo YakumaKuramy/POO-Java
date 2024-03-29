@@ -12,21 +12,25 @@ public class DesafioControleFluxo {
 
         try {
             // chamando o metódo contendo a lógica de contagem
-            contar(parametroUm, parametroDois);
+            contar(parametroUm, paramentroDois);
         }
 
-        catch () {
+        catch (ParametrosInvalidosException e) {
             // imprimir a mensagem: O segundo parâmetro deve ser aior que o primeiro
-            
+            System.out.println(e.getMessage());
         }
 
     }  
 
     static void contar (int paramentroUm, int paramentroDois) throws ParametrosInvalidosException {
         // validar se o parametroUm é MAIOR que parametros e lançar a execeção
-        
+        if (paramentroUm > paramentroDois) {
+            throw new ParametrosInvalidosException();
+        }
         int contagem = paramentroDois - paramentroUm;
         //realziar o for para imprimir os números com base na variável contagem
-
+        for (int i = 1 ; i <= contagem ; i++) {
+            System.out.println("Imprimindo o número " + i);
+        }
     }
 }
